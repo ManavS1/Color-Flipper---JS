@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  list-style-type: none;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: serif;
+  font-weight: 400;
+}
+
+:root {
+  --nav-font-size: 1.8rem;
+  --main-font-size: 4rem;
+  --btn-font-size: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #282a35;
+  font-size: var(--nav-font-size);
+  /* box-shadow: 0 0.2rem 1rem 0.2rem #000000; */
+  position: relative;
+  z-index: 100;
+}
+
+.nav-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-one h2,
+.nav-two h2 {
+  padding: 1.6rem 1rem;
+  color: #f1f1f1;
+}
+
+.main {
+  height: calc(100vh - 6.84rem);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-color {
+  font-size: var(--main-font-size);
+  font-weight: 900;
+  padding: 1.5rem 2rem;
+  color: #fff;
+  background-color: #000;
+  border-radius: 1rem;
+}
+
+.btn {
+  margin-top: 3rem;
+  padding: 1.6rem 3rem;
+  font-size: var(--btn-font-size);
+  background-color: transparent;
+  border: 0.4rem solid #000;
+  border-radius: 1rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 480px) {
+  body{
+    overflow-y:hidden;
+  }
+  .bg-color{
+    font-size: 2.5rem;
+  }
+  .btn{
+    font-size: 2rem;
+    padding: 1rem 1rem;
+    margin-top: 10rem;
+  }
+
+  .main{
+    height: 100vh;
+  }
+
+  .nav-one h2, .nav-two h2{
+    font-size: 1.8rem;
+    padding: 0;
+  }
+  .nav-one h2{
+    padding: 1.5rem 0;
+  }
+  .nav-two h2{
+    padding: 0 1rem;
+  }
+}
